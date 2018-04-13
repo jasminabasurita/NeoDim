@@ -81,7 +81,11 @@ Include undercurl attributes in highlighting (only if underline enabled) >
 * *g:neodim_inverse*
 Include inverse attributes in highlighting >
     let g:neodim_inverse = 1
-<
+
+* *g:neodim_colorterm*
+Include background fill colors >
+   let g:neodim_colorterm = 1
+
 ==============================================================================
 CUSTOMIZATION                                            *neodim-customization*
 

@@ -96,6 +96,10 @@ if !exists('g:neodim_inverse')
   let g:neodim_inverse = 1
 endif
 
+if !exists('g:neodim_colorterm')
+  let g:neodim_colorterm = 1
+endif
+
 "}}}2
 " Script Helpers: {{{2
 
@@ -204,8 +208,8 @@ call s:h('NeoDimDiffDelete', s:red, s:bgdark)
 
 " Core: {{{2
 set background=dark
+call s:h('Normal', s:fg, g:neodim_colorterm == 1 ? s:bg : s:none)
 
-call s:h('Normal', s:fg, s:bg)
 hi! link Visual NeoDimSelection
 hi! link VisualNOS Visual
 hi! link Search NeoDimSearch
@@ -321,7 +325,7 @@ hi! link helpHyperTextJump NeoDimLink
 hi! link helpCommand NeoDimPurple
 hi! link helpExample NeoDimGreen
 
-call s:h('MatchParen', s:none, s:pink, [s:attrs.underline])
+call s:h('MatchParen', s:fg, s:pink, [s:attrs.underline])
 call s:h('Conceal', s:comment, s:bglight)
 
 " CSS: {{{2
@@ -394,7 +398,7 @@ hi! link markdownBoldItalic NeoDimOrangeBoldItalic
 
 hi! link markdownBlockquote NeoDimCyan
 
-hi! link markdownCode NeoDimGreenItalic
+hi! link markdownCode NeoDimGreen
 hi! link markdownCodeDelimiter NeoDimGreen
 
 hi! link markdownListMarker NeoDimCyan
