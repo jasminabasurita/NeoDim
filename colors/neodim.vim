@@ -313,7 +313,7 @@ hi! link StorageClass NeoDimPink
 hi! link Structure NeoDimPink
 hi! link Typedef NeoDimPink
 
-hi! link Type NeoDimCyanItalic
+hi! link Type NeoDimCyan
 
 hi! link Delimiter NeoDimFg
 
